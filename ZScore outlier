@@ -1,0 +1,10 @@
+#ZScore
+def out_zscore(data,cols,threshold=3):
+    global outliers,zscore
+    import numpy as np
+    print('Original shape of dataframe is : ',raw.shape)
+    outliers = []
+    zscore = []
+    data = data[(np.abs(stats.zscore(data[cols])) < threshold).all(axis=1)]
+    print('New shape of dataframe is : ',data.shape)
+    return data
